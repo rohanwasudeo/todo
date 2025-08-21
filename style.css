@@ -1,0 +1,68 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+}
+.card {
+  border: none;
+  border-radius: 1.5rem;
+  transition: box-shadow 0.3s;
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(60, 72, 100, 0.15);
+}
+#todo-form .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.15);
+}
+.list-group-item {
+  background: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(60, 72, 100, 0.04);
+  display: flex;
+  align-items: center;
+}
+.list-group-item.completed {
+  text-decoration: line-through;
+  color: #b0b0b0;
+  background: #f3f4f6;
+  opacity: 0.7;
+  transition: background 0.3s, color 0.3s;
+}
+.list-group-item .todo-text {
+  flex: 1;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.list-group-item .btn {
+  margin-left: 0.5rem;
+  opacity: 0.7;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.list-group-item .btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.spinner-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.7);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1.25rem;
+  }
+  .card {
+    border-radius: 1rem;
+  }
+  .list-group-item {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+}
